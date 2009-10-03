@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "lib/core_ext.rb",
      "lib/payone_connect.rb",
+     "payone_connect.gemspec",
      "spec/payone_connect_spec.rb",
      "spec/spec_helper.rb"
   ]
