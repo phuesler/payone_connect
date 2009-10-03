@@ -3,6 +3,8 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'payone_connect'
 require 'spec'
 require 'spec/autorun'
+require 'rubygems'
+require 'fake_web'
 
 Spec::Runner.configure do |config|
   

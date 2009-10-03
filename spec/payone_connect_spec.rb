@@ -1,5 +1,4 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
-require 'fake_web'
 
 describe PayoneConnect do
   before(:each) do
