@@ -5,12 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "payone_connect"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Simple http clinet for the psp payone api (http://www.payone.de/)}
+    gem.description = %Q{Connects to the payone gateway and passes the parameters}
     gem.email = "patrick.huesler@gmail.com"
-    gem.homepage = "http://github.com/kafka/payone_connect"
+    gem.homepage = "http://github.com/phuesler/payone_connect"
     gem.authors = ["Patrick Huesler"]
-    gem.add_development_dependency "rspec"
+    gem.add_development_dependency ["rspec", "fake_web"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
