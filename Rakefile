@@ -11,6 +11,7 @@ begin
     gem.homepage = "http://github.com/phuesler/payone_connect"
     gem.authors = ["Patrick Huesler"]
     gem.add_development_dependency "rspec"
+    gem.add_development_dependency "fakeweb"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
