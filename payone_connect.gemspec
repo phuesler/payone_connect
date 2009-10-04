@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Patrick Huesler"]
-  s.date = %q{2009-10-03}
+  s.date = %q{2009-10-04}
   s.description = %q{Connects to the payone gateway and passes the parameters}
   s.email = %q{patrick.huesler@gmail.com}
   s.extra_rdoc_files = [
@@ -23,8 +23,8 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "lib/core_ext.rb",
      "lib/payone_connect.rb",
+     "lib/payone_connect/core_ext.rb",
      "payone_connect.gemspec",
      "spec/payone_connect_spec.rb",
      "spec/spec_helper.rb"
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{Simple http clinet for the psp payone api (http://www.payone.de/)}
+  s.summary = %q{Simple http client for the psp payone api (http://www.payone.de/)}
   s.test_files = [
     "spec/payone_connect_spec.rb",
      "spec/spec_helper.rb"
