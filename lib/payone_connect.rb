@@ -1,7 +1,7 @@
 require 'net/http'
 require 'net/https'
 require 'uri'
-require 'core_ext'
+require 'payone_connect/core_ext'
 
 class PayoneConnect
   attr_reader :request_data, :request_header

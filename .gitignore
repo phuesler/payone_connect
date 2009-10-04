@@ -1,4 +1,5 @@
 *.sw?
+*.tmproj
 .DS_Store
 coverage
 rdoc

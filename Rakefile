@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "payone_connect"
-    gem.summary = %Q{Simple http clinet for the psp payone api (http://www.payone.de/)}
+    gem.summary = %Q{Simple http client for the psp payone api (http://www.payone.de/)}
     gem.description = %Q{Connects to the payone gateway and passes the parameters}
     gem.email = "patrick.huesler@gmail.com"
     gem.homepage = "http://github.com/phuesler/payone_connect"
