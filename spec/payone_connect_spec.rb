@@ -45,10 +45,11 @@ describe PayoneConnect do
     end
   end
   
-  describe "successfull request" do
+  describe "successful request" do
     before(:each) do
       FakeWeb.register_uri(:post, "https://testapi.pay1.de/post-gateway/", :body => "status=APPROVED\ntxid=18059493\nuserid=4923401")
     end
+    
     it "should return the status" do
       @finance_gate_connection.request[:status].should == "APPROVED"
     end
@@ -59,6 +60,13 @@ describe PayoneConnect do
     
     it "should return payones user id" do
       @finance_gate_connection.request[:userid].should == "4923401"
+    end
+  end
+  
+  describe "response is redirect" do
+    it "should parse the redirect url correctly" do
+      FakeWeb.register_uri(:post, "https://testapi.pay1.de/post-gateway/", :body => "status=REDIRECT\ntxid=18059493\nuserid=4923401\nredirecturl=https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=ABC&useraction=commit")
+      @finance_gate_connection.request[:redirecturl].should == "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=ABC&useraction=commit"
     end
   end
   

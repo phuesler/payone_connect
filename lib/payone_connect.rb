@@ -24,7 +24,7 @@ class PayoneConnect
     return nil if http_response.body.blank?
     response = {}
     http_response.body.split("\n").each do |param|
-      key,value = param.split("=")
+      key,value = param.scan(/([^=]+)=(.+)/).first
       response[key.to_sym] = value
     end
     response
