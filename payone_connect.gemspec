@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split($\)
   s.test_files    = s.files.grep(%r{^spec/})
 
+  s.add_dependency 'activesupport'
   s.add_development_dependency(%q<rspec>, [">= 0"])
   s.add_development_dependency(%q<fakeweb>, [">= 0"])
 end
