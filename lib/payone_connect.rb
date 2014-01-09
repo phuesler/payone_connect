@@ -1,7 +1,8 @@
 require 'net/http'
 require 'net/https'
 require 'uri'
-require 'payone_connect/core_ext'
+require 'active_support/core_ext/hash/keys'
+require 'active_support/core_ext/object/blank'
 
 class PayoneConnect
   attr_reader :request_data, :request_header
@@ -17,19 +18,19 @@ class PayoneConnect
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     handle_response(http.post(@api_url.path, @request_data,@request_header))
   end
-  
+
   protected
-  
+
   def handle_response(http_response)
     return nil if http_response.body.blank?
     response = {}
-    http_response.body.split("\n").each do |param|
+    http_response.body.split(/\n+/).each do |param|
       key,value = param.scan(/([^=]+)=(.+)/).first
       response[key.to_sym] = value
     end
     response
   end
-  
+
   def process_data(data)
     data.stringify_keys!
     %w(mid portalid key mode).each do |required_field|
