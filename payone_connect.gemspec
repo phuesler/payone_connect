@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^spec/})
 
   s.add_dependency 'activesupport'
-  s.add_development_dependency(%q<rspec>, [">= 0"])
+  s.add_development_dependency(%q<rspec>, ["~> 2.1"])
+  s.add_development_dependency(%q<rake>, [">= 0"])
   s.add_development_dependency(%q<fakeweb>, [">= 0"])
 end
