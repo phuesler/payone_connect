@@ -69,6 +69,12 @@ describe PayoneConnect do
 
       expect(@finance_gate_connection.request[:userid]).to eql("4923401")
     end
+
+    it 'ignores empty values' do
+      FakeWeb.register_uri(:post, "https://testapi.pay1.de/post-gateway/", :body => "status=APPROVED\nmandate_identification=PO-11190784\nmandate_status=active\nmandate_text=\ncreditor_identifier=DE16ZZZ00000961533\niban=DE76460500010209043724\nbic=WELADED1SIE\n")
+
+      expect(@finance_gate_connection.request[:mandate_identification]).to eql("PO-11190784")
+    end
   end
 
   describe "response is redirect" do
