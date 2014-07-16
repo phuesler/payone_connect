@@ -40,10 +40,10 @@ class PayoneConnect
     data.each do |key,value|
       if value.is_a?(Hash)
         value.each do |nested_key, nested_value|
-          post_data << "#{key.to_s}[#{nested_key.to_s}]=#{URI.encode(nested_value.to_s)}"
+          post_data << "#{key.to_s}[#{nested_key.to_s}]=#{URI.encode_www_form_component(nested_value.to_s)}"
         end
       else
-          post_data << "#{key.to_s}=#{URI.encode(value.to_s)}"
+          post_data << "#{key.to_s}=#{URI.encode_www_form_component(value.to_s)}"
       end
     end
     post_data.join("&")

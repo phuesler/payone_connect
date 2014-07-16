@@ -97,7 +97,7 @@ describe PayoneConnect do
   describe "credit card payment parameter assignment" do
     %w(cardpan cardtype cardexpiredate cardcvc2 cardholder).each do |parameter|
       it "sets the #{parameter} parameter" do
-        expect(@finance_gate_connection.request_data).to include("#{parameter}=#{URI.encode(@request_data[parameter].to_s)}")
+        expect(@finance_gate_connection.request_data).to include("#{parameter}=#{URI.encode_www_form_component(@request_data[parameter].to_s)}")
       end
     end
   end
