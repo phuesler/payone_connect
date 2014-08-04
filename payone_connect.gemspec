@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Patrick Huesler", "Alexander Lang", "Jan Raasch"]
+  s.authors = ["Patrick Huesler", "Alexander Lang", "Jan Raasch", "Christoph Hugo"]
   s.date = %q{2009-10-04}
   s.description = %q{Connects to the payone gateway and passes the parameters}
   s.email = %q{patrick.huesler@gmail.com}

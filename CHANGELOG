@@ -1,0 +1,7 @@
+= VERSION 0.2.0
+
+* Fix URI encoding (Jan Raasch)
+* Fixes error when response contains key without value
+* Add to travis (Alexander Lang)
+* Move to bundler (Alexander Lang)
+* Fixes error when response contains multiple consecutive newlines
