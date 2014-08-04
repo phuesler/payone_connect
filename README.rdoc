@@ -3,22 +3,18 @@
 This is a super simple wrapper around the API for the payment service provider payone (http://www.payone.de)
 
 == Installation
-=== Via github
-  gem install phuesler-payone_connect
-=== Via gem cutter (http://www.gemcutter.org)
-  gem install gemcutter
-  gem tumble
+
   gem install payone_connect
 
 == Usage
 
   require 'payone_connect'
-  
+
   payone = PayoneConnect.new(api_key,params_hash)
   puts payone.request[:status]
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
