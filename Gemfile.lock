@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    payone_connect (0.3.0)
+    payone_connect (0.3.1)
       activesupport
 
 GEM
