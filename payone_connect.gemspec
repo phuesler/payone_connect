@@ -2,10 +2,10 @@ require File.expand_path('../lib/payone_connect/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name = %q{payone_connect}
-  s.version = "0.1.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Patrick Huesler"]
+  s.authors = ["Patrick Huesler", "Alexander Lang", "Jan Raasch"]
   s.date = %q{2009-10-04}
   s.description = %q{Connects to the payone gateway and passes the parameters}
   s.email = %q{patrick.huesler@gmail.com}
