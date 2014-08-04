@@ -6,3 +6,4 @@ rdoc
 pkg
 .ruby-gemset
 .ruby-version
+Gemfile.lock
