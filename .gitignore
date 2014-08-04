@@ -5,3 +5,4 @@ coverage
 rdoc
 pkg
 .ruby-gemset
+.ruby-version
