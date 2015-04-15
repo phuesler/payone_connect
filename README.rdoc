@@ -9,8 +9,7 @@ This is a super simple wrapper around the API for the payment service provider p
 == Usage
 
   require 'payone_connect'
-
-  payone = PayoneConnect.new(api_key,params_hash)
+  payone = PayoneConnect.new(payone_api_endpoint, params_hash)
   puts payone.request[:status]
 
 == Note on Patches/Pull Requests
