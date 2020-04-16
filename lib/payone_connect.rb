@@ -15,7 +15,7 @@ class PayoneConnect
   def request
     http = Net::HTTP.new(@api_url.host, @api_url.port)
     http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    http.verify_mode = OpenSSL::SSL::VERIFY_PEER
     handle_response(http.post(@api_url.path, @request_data,@request_header))
   end
 
