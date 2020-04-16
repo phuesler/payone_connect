@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'activesupport'
   s.add_development_dependency(%q<rspec>, ["~> 2.1"])
   s.add_development_dependency(%q<fakeweb>, [">= 0"])
-  s.add_development_dependency(%q<rake>, [">= 0"])
+  s.add_development_dependency(%q<rake>, ["< 11"])
 end
